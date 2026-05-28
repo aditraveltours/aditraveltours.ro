@@ -1,0 +1,142 @@
+/* Logo Styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-logo img {
+  display: block;
+  height: auto;
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.nav-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  display: block; /* Always show text */
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    gap: 4px; /* Smaller gap on tablet */
+  }
+
+  .nav-logo-text {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    gap: 3px; /* Very small gap on small mobile */
+  }
+
+  .nav-logo img {
+    max-height: 45px !important; /* Balanced size - visible but not too large */
+  }
+
+  .nav-logo-text {
+    font-size: 0.85rem; /* Readable text size on small mobile */
+    font-weight: 700;
+  }
+}
+
+.scrolled .nav-logo img {
+  max-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.scrolled .nav-logo-text {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .scrolled .nav-logo-text {
+    font-size: 0.8rem !important;
+  }
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -4rem;
+}
+
+.hero-logo img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  animation: fadeInDown 1s ease;
+}
+
+.footer-logo-section {
+  margin-bottom: 1rem;
+}
+
+.footer-logo-section img {
+  filter: brightness(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive logo sizes */
+@media (max-width: 768px) {
+  .nav-logo img {
+    max-height: 45px; /* Normal size on tablet */
+  }
+
+  .scrolled .nav-logo img {
+    max-height: 40px;
+  }
+
+  .hero-logo img {
+    max-width: 300px !important;
+  }
+
+  .footer-logo-section img {
+    max-width: 160px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo img {
+    max-height: 45px !important; /* Balanced size - visible but not too large */
+  }
+
+  .scrolled .nav-logo img {
+    max-height: 35px !important; /* Smaller when scrolled but still visible */
+  }
+
+  .hero-logo img {
+    max-width: 250px !important;
+  }
+
+  .footer-logo-section img {
+    max-width: 140px !important;
+  }
+}
