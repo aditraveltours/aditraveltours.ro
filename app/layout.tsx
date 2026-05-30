@@ -166,6 +166,7 @@ export default function RootLayout({
 
         <StructuredData />
         {children}
+     <SpeedInsights  />
       </body>
     </html>
   )
